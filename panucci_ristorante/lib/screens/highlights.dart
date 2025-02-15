@@ -16,7 +16,7 @@ class Highlights extends StatelessWidget {
         slivers: <Widget>[
           const SliverToBoxAdapter(
               child: Padding(
-            padding: const EdgeInsets.only(bottom: 16.0),
+            padding: EdgeInsets.only(bottom: 16.0),
             child: Text(
               "Destaques",
               style: TextStyle(fontFamily: "Caveat", fontSize: 32),

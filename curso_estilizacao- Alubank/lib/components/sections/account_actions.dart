@@ -20,7 +20,6 @@ class AccountActions extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               InkWell(
-                
                 child: BoxCard(
                     boxContent: _AccontActionsContent(
                   icon: Icon(Icons.account_balance_wallet),
@@ -52,18 +51,16 @@ class AccountActions extends StatelessWidget {
 class _AccontActionsContent extends StatelessWidget {
   final icon;
   final String text;
-  const _AccontActionsContent(
-      {super.key, required this.icon, required this.text});
+  const _AccontActionsContent({required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 74,
+    return SizedBox(
+      width: 75,
       child: Column(
         children: [
-          
           Padding(
-            padding: EdgeInsets.only(bottom: 8),
+            padding: const EdgeInsets.only(bottom: 8),
             child: icon,
           ),
           Text(text)

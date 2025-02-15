@@ -18,7 +18,7 @@ class RecentActivity extends StatelessWidget {
 }
 
 class _RecentActivityContent extends StatelessWidget {
-  const _RecentActivityContent({super.key});
+  const _RecentActivityContent();
 
   @override
   Widget build(BuildContext context) {

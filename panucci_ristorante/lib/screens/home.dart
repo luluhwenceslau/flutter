@@ -3,6 +3,7 @@ import 'package:panucci_ristorante/components/main_drawer.dart';
 import 'package:panucci_ristorante/screens/highlights.dart';
 import 'package:panucci_ristorante/themes/app_colors.dart';
 
+import 'checkout.dart';
 import 'drink_menu.dart';
 import 'food_menu.dart';
 
@@ -40,7 +41,7 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return const Home();
+            return const Checkout();
           }));
         },
         child: const Icon(Icons.point_of_sale),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:panucci_ristorante/components/order_item.dart';
 import 'package:panucci_ristorante/components/payment_method.dart';
+import 'package:panucci_ristorante/components/payment_total.dart';
 
 import '../cardapio.dart';
 import '../components/main_drawer.dart';
@@ -58,8 +59,20 @@ class Checkout extends StatelessWidget {
                 ),
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: PaymentMethod(),
+            ),
+            const SliverToBoxAdapter(
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 8),
+                child: Text(
+                  "Confirmar",
+                  style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+                ),
+              ),
+            ),
+            const SliverToBoxAdapter(
+              child: PaymentTotal(),
             )
           ],
         ),

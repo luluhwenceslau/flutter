@@ -3,12 +3,24 @@ import 'package:flutter/material.dart';
 import 'models/client.dart';
 import 'models/client_type.dart';
 import 'models/clientes.dart';
+import 'models/types.dart';
 import 'pages/clients_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {
-  runApp(ChangeNotifierProvider(
-      create: (context) => Clients(clients: [Client(name: 'Geraldo', email: 'leo@email.com', type: ClientType(name: 'Platinum', icon: Icons.credit_card)),]), child: const MyApp()));
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (context) => Clients(clients: [])),
+      ChangeNotifierProvider(
+          create: (context) => Types(types: [
+                ClientType(name: 'Platinum', icon: Icons.credit_card),
+                ClientType(name: 'Golden', icon: Icons.card_membership),
+                ClientType(name: 'Titanium', icon: Icons.credit_score),
+                ClientType(name: 'Diamond', icon: Icons.diamond),
+              ]))
+    ],
+    child: const MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
